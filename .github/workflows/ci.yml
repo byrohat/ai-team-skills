@@ -1,0 +1,114 @@
+name: CI
+
+# Runs automatically on every push to main and on every pull request.
+# It enforces the framework's own governance rules so nothing inconsistent gets merged.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate framework
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON files parse
+        run: |
+          fail=0
+          while IFS= read -r f; do
+            if ! python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$f" 2>/dev/null; then
+              echo "::error file=$f::Invalid JSON"
+              fail=1
+            fi
+          done < <(find . -name '*.json' -not -path '*/node_modules/*' -not -path './.git/*')
+          [ "$fail" -eq 0 ] && echo "All JSON files valid ✓"
+          exit $fail
+
+      - name: Validate TOML files parse
+        run: |
+          python3 - <<'PY'
+          import glob, sys, tomllib
+          fail = 0
+          for f in glob.glob('**/*.toml', recursive=True):
+              if 'node_modules' in f:
+                  continue
+              try:
+                  with open(f, 'rb') as fh:
+                      tomllib.load(fh)
+              except Exception as e:
+                  print(f"::error file={f}::Invalid TOML: {e}")
+                  fail = 1
+          print("All TOML files valid ✓" if not fail else "")
+          sys.exit(fail)
+          PY
+
+      - name: Enforce 1000-line file limit (skills)
+        run: |
+          fail=0
+          while IFS= read -r f; do
+            lines=$(wc -l < "$f")
+            if [ "$lines" -gt 1000 ]; then
+              echo "::error file=$f::$lines lines exceeds the 1000-line hard limit"
+              fail=1
+            fi
+          done < <(find .claude/skills -name '*.md')
+          [ "$fail" -eq 0 ] && echo "All skill files within the 1000-line limit ✓"
+          exit $fail
+
+      - name: Verify skill mirrors are in sync
+        run: |
+          claude=$(cd .claude/skills && md5sum *.md | sort)
+          cursor=$(cd .cursor/skills && md5sum *.md | sort)
+          windsurf=$(cd .windsurf/skills && md5sum *.md | sort)
+          if [ "$claude" != "$cursor" ]; then
+            echo "::error::.cursor/skills is out of sync with .claude/skills"
+            diff <(echo "$claude") <(echo "$cursor") || true
+            exit 1
+          fi
+          if [ "$claude" != "$windsurf" ]; then
+            echo "::error::.windsurf/skills is out of sync with .claude/skills"
+            diff <(echo "$claude") <(echo "$windsurf") || true
+            exit 1
+          fi
+          echo "Skill mirrors .claude == .cursor == .windsurf ✓"
+
+      - name: Verify activation & license files present
+        run: |
+          fail=0
+          for f in \
+            CLAUDE.md AGENTS.md GEMINI.md AI-TEAM.md ANTIGRAVITY.md \
+            .cursorrules .windsurfrules \
+            .cursor/rules/ai-team.mdc .windsurf/rules/ai-team.md \
+            .trae/rules/ai-team.md .agents/rules/ai-team.md \
+            .github/copilot-instructions.md \
+            .claude/skills/_core-protocols.md LICENSE; do
+            if [ ! -f "$f" ]; then
+              echo "::error::Missing required file: $f"
+              fail=1
+            fi
+          done
+          [ "$fail" -eq 0 ] && echo "All activation & license files present ✓"
+          exit $fail
+
+      - name: Python syntax check (scripts)
+        run: |
+          if [ -d src/ai-team/scripts ]; then
+            python3 -m compileall -q src/ai-team/scripts && echo "Python scripts compile ✓"
+          else
+            echo "No scripts directory — skipping"
+          fi
+
+  shellcheck:
+    name: Shellcheck installer
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run shellcheck on install.sh
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y shellcheck
+          shellcheck -S warning install.sh
+        continue-on-error: true

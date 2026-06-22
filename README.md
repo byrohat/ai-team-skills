@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/social-preview.png" alt="AI Team Skills — a complete, autonomous AI engineering team for your codebase" width="820">
+
 # 🤖 AI Team Skills
 
 ### A complete, autonomous AI engineering team for your codebase — across every major AI IDE.
