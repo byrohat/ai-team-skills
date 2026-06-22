@@ -1,0 +1,51 @@
+{
+  "agent": "qa",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "coverage": {
+      "unit": 0,
+      "integration": 0,
+      "e2e": 0
+    },
+    "test_count": {
+      "unit": 0,
+      "integration": 0,
+      "e2e": 0
+    },
+    "last_run": null,
+    "flaky_tests": [],
+    "performance_metrics": {
+      "api_p95": 0,
+      "page_load": 0
+    }
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "unit_tests": "tests/unit/",
+    "integration_tests": "tests/integration/",
+    "e2e_tests": "tests/e2e/",
+    "test_config": "vitest.config.ts"
+  },
+  "coverage_targets": {
+    "unit": 80,
+    "integration": 70,
+    "e2e": "critical_paths"
+  },
+  "dependencies": [
+    "backend",
+    "frontend"
+  ],
+  "dependents": [],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

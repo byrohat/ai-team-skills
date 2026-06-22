@@ -1,0 +1,39 @@
+{
+  "agent": "privacy",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "compliance": {
+      "gdpr": false,
+      "ccpa": false,
+      "hipaa": false,
+      "coppa": false
+    },
+    "data_inventory": [],
+    "consent_version": "",
+    "pii_fields": [],
+    "retention_policies": {}
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": [],
+    "compliance_gaps": []
+  },
+  "deliverables": {
+    "privacy_assessment": "PRIVACY.md",
+    "privacy_config": "config/privacy.toml"
+  },
+  "dependencies": [
+    "backend",
+    "frontend"
+  ],
+  "dependents": [],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

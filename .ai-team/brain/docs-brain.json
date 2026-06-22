@@ -1,0 +1,55 @@
+{
+  "agent": "docs",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "documentation": {
+      "readme": {
+        "complete": false,
+        "last_updated": null
+      },
+      "api": {
+        "complete": false,
+        "last_updated": null
+      },
+      "architecture": {
+        "complete": false,
+        "last_updated": null
+      },
+      "guides": {
+        "complete": false,
+        "last_updated": null
+      }
+    },
+    "coverage": {
+      "files_documented": 0,
+      "files_total": 0,
+      "percentage": 0
+    },
+    "pending_docs": []
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "root_readme": "README.md",
+    "architecture_doc": "ARCHITECTURE.md",
+    "api_docs": "docs/API.md",
+    "guides": "docs/guides/"
+  },
+  "dependencies": [
+    "architecture",
+    "backend",
+    "frontend"
+  ],
+  "dependents": [],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

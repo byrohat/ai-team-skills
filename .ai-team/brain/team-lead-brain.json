@@ -1,0 +1,77 @@
+{
+  "agent": "team-lead",
+  "version": "2.3.0",
+  "project_id": "1749217370",
+  "project_name": "ai-team-skills",
+  "initialized_at": "2026-06-06T16:46:11+03:00",
+  "last_update": "2026-06-21T00:00:00+00:00",
+  "memory": {
+    "active_tasks": [],
+    "completed_tasks": [],
+    "blockers": [],
+    "key_decisions": [
+      "Proje kurulumu tamamland\u0131 - t\u00fcm platformlar (Claude, Cursor, Windsurf, VS Code)",
+      "v2.2.0: 4 yeni agent eklendi (UX Designer, Data Engineer, SRE, Mobile Engineer)",
+      "v2.2.0: Dosya sat\u0131r limiti 700 \u2192 1000 olarak g\u00fcncellendi"
+    ],
+    "adrs": [],
+    "risk_register": [],
+    "team_notes": [
+      "\u0130lk aktivasyon - 2026-06-06",
+      "v2.2.0 g\u00fcncellemesi - 2026-06-21"
+    ]
+  },
+  "velocity": {
+    "sprints": [],
+    "average_velocity": 0,
+    "standard_deviation": 0,
+    "planned_capacity": 0,
+    "current_sprint": 1
+  },
+  "state": {
+    "phase": "initiation",
+    "current_sprint": 1,
+    "deployment_ready": false,
+    "last_deployment_check": null,
+    "quality_gates": {
+      "security": false,
+      "sre": false,
+      "quality": false,
+      "performance": false,
+      "documentation": false,
+      "compliance": false,
+      "code_quality": false
+    }
+  },
+  "team_status": {
+    "product-owner": "pending",
+    "architecture": "pending",
+    "ux-designer": "pending",
+    "ai-engineer": "pending",
+    "data-engineer": "pending",
+    "backend": "pending",
+    "frontend": "pending",
+    "mobile-engineer": "pending",
+    "security": "pending",
+    "privacy": "pending",
+    "sre": "pending",
+    "qa": "pending",
+    "devops": "pending",
+    "performance": "pending",
+    "observability": "pending",
+    "docs": "pending"
+  },
+  "configuration": {
+    "max_file_lines": 1000,
+    "token_optimization": true,
+    "auto_activate": true,
+    "quality_gates_enabled": true,
+    "sprint_duration_days": 14,
+    "target_velocity": 40
+  },
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

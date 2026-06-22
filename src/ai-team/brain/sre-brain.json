@@ -1,0 +1,100 @@
+{
+  "schema_version": "2.2.0",
+  "agent": "sre",
+  "version": "2.3.0",
+  "last_update": null,
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "deployment_blocked": false,
+    "blocker_reason": null
+  },
+  "slo_registry": {
+    "api-gateway": {
+      "availability_target": 99.9,
+      "latency_p50_target_ms": 100,
+      "latency_p99_target_ms": 500,
+      "error_rate_target_pct": 0.1,
+      "error_budget_minutes_monthly": 43.8,
+      "error_budget_remaining_pct": 100,
+      "slo_doc_path": "slo/api-gateway.yaml",
+      "last_reviewed": null
+    }
+  },
+  "error_budgets": {
+    "api-gateway": {
+      "remaining_pct": 100,
+      "burn_rate_1h": 0,
+      "burn_rate_6h": 0,
+      "policy_enforced": false,
+      "feature_freeze": false,
+      "deployment_blocked": false,
+      "last_computed": null
+    }
+  },
+  "active_incidents": [],
+  "incident_history": [],
+  "chaos_experiments": {
+    "completed_this_quarter": 0,
+    "experiments": []
+  },
+  "post_mortems": {
+    "overdue": [],
+    "completed": []
+  },
+  "capacity_plans": {
+    "api-gateway": {
+      "last_reviewed": null,
+      "current_replicas": null,
+      "peak_rps_last_90d": null,
+      "projected_peak_rps_90d": null,
+      "headroom_pct": null,
+      "action_required": false,
+      "recommendation": null
+    }
+  },
+  "toil": {
+    "weekly_toil_pct": null,
+    "open_items": [],
+    "automated_this_quarter": 0
+  },
+  "runbooks": {
+    "total_alerts": 0,
+    "alerts_with_runbook": 0,
+    "coverage_pct": 0,
+    "last_dry_run": null
+  },
+  "on_call": {
+    "tool": null,
+    "rotation_configured": false,
+    "escalation_levels": 0,
+    "current_primary": null,
+    "current_secondary": null
+  },
+  "open_issues": [],
+  "remaining": [
+    "Define SLOs for all user-facing services",
+    "Configure burn rate alert rules in Prometheus",
+    "Publish error budget policy",
+    "Set up on-call rotation in PagerDuty/OpsGenie",
+    "Author runbooks for all production alerts",
+    "Complete first chaos experiment per critical path",
+    "Publish capacity plan for next 90 days"
+  ],
+  "deliverables": {
+    "slo_specs": "slo/",
+    "burn_rate_rules": "prometheus/rules/slo-burn-rates.yaml",
+    "error_budget_policy": "sre/error-budget-policy.yaml",
+    "incident_severity_matrix": "sre/severity-matrix.md",
+    "oncall_rotation": "oncall/rotation.yaml",
+    "chaos_experiments": "chaos/experiments/",
+    "capacity_plans": "capacity/",
+    "runbooks": "runbooks/",
+    "toil_register": "sre/toil-register.yaml"
+  },
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

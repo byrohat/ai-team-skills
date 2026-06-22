@@ -1,0 +1,76 @@
+{
+  "schema_version": "2.2.0",
+  "agent": "ux-designer",
+  "version": "2.3.0",
+  "last_update": null,
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "deployment_blocked": false,
+    "blocker_reason": null
+  },
+  "design_system": {
+    "token_version": "0.0.0",
+    "tokens_exported": false,
+    "tokens_path": "tokens/design-tokens.json",
+    "css_path": "tokens/tokens.css",
+    "last_token_export": null,
+    "storybook_configured": false,
+    "dark_mode_tokens_defined": false,
+    "font_families": {
+      "heading": "",
+      "body": "",
+      "mono": ""
+    },
+    "breakpoints": {
+      "xs": "320px",
+      "sm": "480px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1440px"
+    }
+  },
+  "component_library": {
+    "total_components": 0,
+    "completed": 0,
+    "in_progress": 0,
+    "pending": 0,
+    "components": []
+  },
+  "accessibility": {
+    "wcag_target": "AA",
+    "wcag_version": "2.2",
+    "last_audit_date": null,
+    "audit_tool": "Figma A11y / axe-core",
+    "open_issues": [],
+    "contrast_failures": []
+  },
+  "user_flows": {
+    "total": 0,
+    "completed": 0,
+    "flows": []
+  },
+  "wireframes": {
+    "total_screens": 0,
+    "completed": 0,
+    "screens": []
+  },
+  "pending_handoffs": [],
+  "completed_handoffs": [],
+  "open_design_issues": [],
+  "dependencies": {
+    "architecture": "pending",
+    "product_owner": "pending"
+  },
+  "blocks": [
+    "frontend",
+    "mobile-engineer"
+  ],
+  "remaining": [],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

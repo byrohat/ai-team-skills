@@ -1,0 +1,257 @@
+{
+  "name": "ai-team-skills",
+  "version": "2.3.0",
+  "description": "Enterprise-grade Multi-agent AI development team system for fullstack projects — project-aware, self-adapting, and continuous across sessions",
+  "author": "ByRohat",
+  "license": "MIT",
+  "homepage": "https://github.com/ByRohat/ai-team-skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ByRohat/ai-team-skills"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "team",
+    "development",
+    "fullstack",
+    "claude",
+    "cursor",
+    "windsurf",
+    "antigravity",
+    "gemini",
+    "trae",
+    "codex-cli",
+    "security",
+    "quality",
+    "performance",
+    "devops",
+    "observability",
+    "sre",
+    "mobile",
+    "data-engineering",
+    "ux-design"
+  ],
+  "skills": [
+    {
+      "name": "_core-protocols",
+      "file": ".claude/skills/_core-protocols.md",
+      "description": "Shared operating system for every agent — the four cross-cutting protocols (Continuity, Adaptation, Self-Evolution, Clarification) + the brain contract. Not an agent persona; read once per session.",
+      "priority": 0
+    },
+    {
+      "name": "product-owner",
+      "file": ".claude/skills/product-owner.md",
+      "description": "Backlog grooming, user stories, Gherkin acceptance criteria, RICE scoring, OKR alignment, sprint planning",
+      "priority": 1
+    },
+    {
+      "name": "team-lead",
+      "file": ".claude/skills/team-lead.md",
+      "description": "Project coordination, sprint metrics, velocity tracking, risk matrix, ADR management",
+      "priority": 1
+    },
+    {
+      "name": "architecture",
+      "file": ".claude/skills/architecture.md",
+      "description": "System design, architectural patterns, C4 diagrams, ADR registry",
+      "priority": 2
+    },
+    {
+      "name": "ux-designer",
+      "file": ".claude/skills/ux-designer.md",
+      "description": "Design systems, design tokens, wireframing, WCAG 2.2 accessibility, responsive design, design-dev handoff",
+      "priority": 2
+    },
+    {
+      "name": "ai-engineer",
+      "file": ".claude/skills/ai-engineer.md",
+      "description": "LLM integrations, prompt engineering, RAG pipelines, vector databases, multi-agent orchestration, LLMOps",
+      "priority": 2
+    },
+    {
+      "name": "data-engineer",
+      "file": ".claude/skills/data-engineer.md",
+      "description": "ETL/ELT pipelines, dbt data modeling, Apache Kafka streaming, data quality, Airflow orchestration, data contracts",
+      "priority": 2
+    },
+    {
+      "name": "backend",
+      "file": ".claude/skills/backend.md",
+      "description": "API contracts, business logic, DB query optimization, OpenTelemetry",
+      "priority": 2
+    },
+    {
+      "name": "frontend",
+      "file": ".claude/skills/frontend.md",
+      "description": "UI development, Core Web Vitals, accessibility WCAG 2.2, i18n, Zustand",
+      "priority": 2
+    },
+    {
+      "name": "mobile-engineer",
+      "file": ".claude/skills/mobile-engineer.md",
+      "description": "iOS/Android/React Native/Flutter development, offline-first, push notifications, app store deployment",
+      "priority": 2
+    },
+    {
+      "name": "devops",
+      "file": ".claude/skills/devops.md",
+      "description": "CI/CD pipelines, containerization, Kubernetes orchestration, Secrets management",
+      "priority": 2
+    },
+    {
+      "name": "sre",
+      "file": ".claude/skills/sre.md",
+      "description": "SLO/SLI/error budgets, incident management, chaos engineering, capacity planning, runbooks, toil reduction",
+      "priority": 2
+    },
+    {
+      "name": "performance",
+      "file": ".claude/skills/performance.md",
+      "description": "API latency, query profiling, caching strategy, load testing",
+      "priority": 2
+    },
+    {
+      "name": "observability",
+      "file": ".claude/skills/observability.md",
+      "description": "Structured JSON logging, OpenTelemetry tracing, Prometheus metrics, Grafana",
+      "priority": 2
+    },
+    {
+      "name": "security",
+      "file": ".claude/skills/security.md",
+      "description": "OWASP 2024 audits, SAST/DAST scanner checks, threat modeling",
+      "priority": 1
+    },
+    {
+      "name": "privacy",
+      "file": ".claude/skills/privacy.md",
+      "description": "GDPR/CCPA/KVKK regulations, PII encryption, DPIA audits",
+      "priority": 1
+    },
+    {
+      "name": "qa",
+      "file": ".claude/skills/qa.md",
+      "description": "Unit, integration, E2E, contract (Pact), chaos and mutation tests",
+      "priority": 2
+    },
+    {
+      "name": "docs",
+      "file": ".claude/skills/docs.md",
+      "description": "OpenAPI specs, Runbooks, Post-mortem documentation, Changelogs",
+      "priority": 3
+    }
+  ],
+  "brain": {
+    "storage": ".ai-team/brain",
+    "files": [
+      "project-profile.json",
+      "project-state.json",
+      "task-queue.toml",
+      "proposed-improvements.md",
+      "product-owner-brain.json",
+      "team-lead-brain.json",
+      "architecture-brain.json",
+      "ux-designer-brain.json",
+      "ai-engineer-brain.json",
+      "data-engineer-brain.json",
+      "backend-brain.json",
+      "frontend-brain.json",
+      "mobile-engineer-brain.json",
+      "devops-brain.json",
+      "sre-brain.json",
+      "performance-brain.json",
+      "observability-brain.json",
+      "security-brain.json",
+      "privacy-brain.json",
+      "qa-brain.json",
+      "docs-brain.json",
+      "messages/"
+    ],
+    "auto_restore": true
+  },
+  "commands": {
+    "team-status": "Full team report",
+    "team-blockers": "List active blockers",
+    "team-next": "Next actions",
+    "deploy-check": "Deployment readiness check",
+    "team-init": "Initialize project",
+    "team-context": "Show current context",
+    "team-sprint": "Sprint planning and velocity management",
+    "team-adr": "Spawn new Architecture Decision Record",
+    "team-retro": "Generate sprint retrospective",
+    "team-risk": "Show risk register",
+    "team-slo": "Show SRE SLO dashboard and error budgets",
+    "team-data": "Show Data Engineer pipeline status"
+  },
+  "scripts": {
+    "brain_manager": "src/ai-team/scripts/brain_manager.py",
+    "agent_communication": "src/ai-team/scripts/agent-communication.py",
+    "auto_activator": "src/ai-team/scripts/auto-activator.py"
+  },
+  "agent_dependencies": {
+    "product-owner":    { "manages": ["team-lead"], "blocks": ["architecture"], "blocked_by": [] },
+    "team-lead":        { "manages": ["architecture","ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer","devops","sre","performance","observability","security","privacy","qa","docs"], "blocks": ["deployment"], "blocked_by": ["product-owner"] },
+    "architecture":     { "manages": [], "blocks": ["ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer"], "blocked_by": [] },
+    "ux-designer":      { "manages": [], "blocks": ["frontend","mobile-engineer"], "blocked_by": ["architecture","product-owner"] },
+    "ai-engineer":      { "manages": [], "blocks": ["backend","frontend","qa","observability","data-engineer"], "blocked_by": ["architecture"] },
+    "data-engineer":    { "manages": [], "blocks": ["ai-engineer","observability"], "blocked_by": ["architecture","backend"] },
+    "backend":          { "manages": [], "blocks": ["frontend","mobile-engineer","qa","observability"], "blocked_by": ["architecture","ai-engineer"] },
+    "frontend":         { "manages": [], "blocks": ["performance"], "blocked_by": ["architecture","backend","ai-engineer","ux-designer"] },
+    "mobile-engineer":  { "manages": [], "blocks": ["qa","performance","security"], "blocked_by": ["architecture","backend","ux-designer","ai-engineer"] },
+    "devops":           { "manages": [], "blocks": ["observability","sre","deployment"], "blocked_by": [] },
+    "sre":              { "manages": [], "blocks": ["deployment"], "blocked_by": ["devops","observability"], "deployment_hold": true },
+    "performance":      { "manages": [], "blocks": ["security","privacy","deployment"], "blocked_by": ["frontend","mobile-engineer","qa"] },
+    "observability":    { "manages": [], "blocks": ["sre","deployment"], "blocked_by": ["backend","devops","ai-engineer","data-engineer"] },
+    "security":         { "manages": [], "blocks": ["deployment"], "blocked_by": ["performance"], "veto_power": true },
+    "privacy":          { "manages": [], "blocks": ["deployment"], "blocked_by": ["performance"] },
+    "qa":               { "manages": [], "blocks": ["performance"], "blocked_by": ["backend","frontend","mobile-engineer","ai-engineer"] },
+    "docs":             { "manages": [], "blocks": [], "blocked_by": ["architecture","backend","frontend","mobile-engineer"] }
+  },
+  "config": {
+    "file_size_limit": 1000,
+    "file_size_warn": 700,
+    "token_optimization": true,
+    "auto_activate": true,
+    "autonomous_activation": true,
+    "cross_session_memory": true,
+    "self_adapting": true,
+    "self_evolving": true,
+    "core_protocols_file": ".claude/skills/_core-protocols.md",
+    "project_profile": ".ai-team/brain/project-profile.json",
+    "quality_gates": ["security","sre","coverage","docs","file_size","performance","observability","privacy"]
+  },
+  "protocols": {
+    "autonomous_activation": "Activate on the first message of every session WITHOUT being asked; then operate autonomously through the task queue, pausing only for the Clarification guardrails and never bypassing VETO/HOLD gates.",
+    "continuity": "Read the brain (profile first) and reconstruct project state before acting; a fresh chat resumes seamlessly.",
+    "adaptation": "Tailor every recommendation to the project's real stack/conventions/glossary in project-profile.json; detect & populate if empty.",
+    "self_evolution": "Write learnings to the brain freely; propose skill-file changes in proposed-improvements.md and ask — never edit skills silently.",
+    "clarification": "Ask the user when a wrong assumption is costly or irreversible; proceed with a stated assumption otherwise; never invent values."
+  },
+  "integrations": {
+    "ui-ux-pro-max": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+  },
+  "auto_activation_files": {
+    "claude": ["CLAUDE.md"],
+    "cursor": [".cursor/rules/ai-team.mdc", ".cursorrules"],
+    "windsurf": [".windsurf/rules/ai-team.md", ".windsurfrules"],
+    "antigravity": ["GEMINI.md", "AGENTS.md", ".agents/rules/ai-team.md", "ANTIGRAVITY.md"],
+    "gemini-cli": ["GEMINI.md", "AGENTS.md"],
+    "trae": [".trae/rules/ai-team.md"],
+    "codex-cli": ["AGENTS.md"],
+    "github-copilot": [".github/copilot-instructions.md"],
+    "vscode": [".github/copilot-instructions.md", ".vscode/ai-team-settings.json", "AI-TEAM.md"],
+    "generic": ["AI-TEAM.md"]
+  },
+  "supported_platforms": [
+    "claude",
+    "cursor",
+    "windsurf",
+    "antigravity",
+    "gemini",
+    "trae",
+    "codex-cli",
+    "codeium",
+    "github-copilot"
+  ]
+}

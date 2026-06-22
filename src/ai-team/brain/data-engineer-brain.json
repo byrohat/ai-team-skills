@@ -1,0 +1,145 @@
+{
+  "schema_version": "2.2.0",
+  "agent": "data-engineer",
+  "version": "2.3.0",
+  "last_update": null,
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "deployment_blocked": false,
+    "blocker_reason": null
+  },
+  "pipeline_inventory": [
+    {
+      "pipeline_id": "",
+      "name": "",
+      "type": "batch|streaming",
+      "tier": "1|2|3",
+      "source": "",
+      "destination": "",
+      "schedule": "",
+      "sla_hours": 0,
+      "status": "pending|in_progress|active|degraded|failed",
+      "last_run": null,
+      "last_run_duration_mins": null,
+      "idempotent": false,
+      "schema_contract": false,
+      "runbook_url": ""
+    }
+  ],
+  "dbt_models": {
+    "staging": [
+      {
+        "model": "",
+        "source_table": "",
+        "tests_passing": false,
+        "freshness_sla_hours": 0,
+        "contract_enforced": false
+      }
+    ],
+    "intermediate": [
+      {
+        "model": "",
+        "pii_masked": false,
+        "dependencies": []
+      }
+    ],
+    "marts": [
+      {
+        "model": "",
+        "materialization": "table|incremental|view",
+        "unique_key": "",
+        "incremental_strategy": "merge|delete+insert",
+        "partition_field": "",
+        "cluster_fields": [],
+        "tests_passing": false,
+        "contract_enforced": false,
+        "downstream_consumers": []
+      }
+    ]
+  },
+  "kafka_topics": [
+    {
+      "topic_name": "",
+      "domain": "",
+      "entity": "",
+      "event_type": "",
+      "partitions": 0,
+      "replication_factor": 3,
+      "retention_ms": 604800000,
+      "schema_subject": "",
+      "schema_version": 0,
+      "compatibility_level": "BACKWARD|FORWARD|FULL",
+      "consumer_groups": []
+    }
+  ],
+  "data_quality": {
+    "overall_score": 0,
+    "last_evaluated": null,
+    "pipelines": [
+      {
+        "pipeline_id": "",
+        "dbt_tests_total": 0,
+        "dbt_tests_passing": 0,
+        "ge_checkpoints_passing": false,
+        "row_count_anomaly_active": false,
+        "freshness_check_active": false,
+        "score": 0
+      }
+    ]
+  },
+  "sla_compliance": {
+    "total_pipelines": 0,
+    "within_sla": 0,
+    "breached": [
+      {
+        "pipeline_id": "",
+        "sla_hours": 0,
+        "actual_latency_hours": 0,
+        "breach_start": null,
+        "notified": false
+      }
+    ]
+  },
+  "schema_registry": {
+    "registry_url": "",
+    "subjects": [
+      {
+        "subject": "",
+        "latest_version": 0,
+        "compatibility": "BACKWARD|FORWARD|FULL",
+        "registered_at": null
+      }
+    ]
+  },
+  "lineage": {
+    "openlineage_url": "",
+    "namespaces": [],
+    "coverage_percent": 0
+  },
+  "open_issues": [
+    {
+      "id": "",
+      "severity": "critical|high|medium|low",
+      "pipeline_id": "",
+      "description": "",
+      "created_at": null,
+      "resolved": false
+    }
+  ],
+  "remaining": [],
+  "dependencies": [
+    "architecture",
+    "backend"
+  ],
+  "dependents": [
+    "ai-engineer",
+    "observability",
+    "performance"
+  ],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

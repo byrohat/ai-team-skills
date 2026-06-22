@@ -1,0 +1,94 @@
+{
+  "schema_version": "2.2.0",
+  "agent": "mobile-engineer",
+  "version": "2.3.0",
+  "last_update": null,
+  "project_metadata": {
+    "project_name": "",
+    "framework": "react-native",
+    "framework_version": "",
+    "expo_sdk_version": "",
+    "platforms": [],
+    "min_ios_version": "15.0",
+    "min_android_api": 26,
+    "bundle_id_ios": "",
+    "application_id_android": ""
+  },
+  "app_versions": {
+    "current_version": "1.0.0",
+    "ios_build_number": 0,
+    "android_version_code": 0
+  },
+  "store_status": {
+    "ios": {
+      "track": "internal",
+      "status": "pending",
+      "last_submitted": null,
+      "review_notes": null
+    },
+    "android": {
+      "track": "internal",
+      "status": "pending",
+      "last_submitted": null,
+      "rollout_percentage": 0
+    }
+  },
+  "platform_coverage": {
+    "ios": {
+      "implemented": false,
+      "tested_on_device": false
+    },
+    "android": {
+      "implemented": false,
+      "tested_on_device": false
+    }
+  },
+  "performance_metrics": {
+    "cold_start_ms": {
+      "ios": null,
+      "android": null,
+      "target": 2000
+    },
+    "warm_start_ms": {
+      "ios": null,
+      "android": null,
+      "target": 1000
+    },
+    "js_bundle_size_kb": null,
+    "ipa_size_mb": null,
+    "apk_size_mb": null,
+    "fps_floor": null
+  },
+  "features": {
+    "offline_mode": false,
+    "push_notifications": false,
+    "deep_links": false,
+    "certificate_pinning": false,
+    "secure_storage": false,
+    "jailbreak_detection": false,
+    "fastlane_ci": false
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "deployment_blocked": false,
+    "blocker_reason": null
+  },
+  "open_issues": [],
+  "remaining": [],
+  "dependencies": [
+    "architecture",
+    "backend",
+    "frontend"
+  ],
+  "dependents": [
+    "qa",
+    "performance",
+    "security"
+  ],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

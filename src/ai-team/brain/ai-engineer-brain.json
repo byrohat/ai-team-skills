@@ -1,0 +1,39 @@
+{
+  "agent": "ai-engineer",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "models_used": {
+      "balanced": "claude-sonnet-4-6",
+      "complex": "claude-opus-4-8",
+      "fast": "claude-haiku-4-5-20251001"
+    },
+    "providers": [],
+    "rag": { "enabled": false, "retriever": "", "reranker": "", "chunking": "" },
+    "vector_db": { "type": "", "index": "", "dimensions": 0 },
+    "prompts": [],
+    "cost_tracking": { "currency": "USD", "monthly_budget": 0, "spent": 0 },
+    "hallucination_rate": null,
+    "eval_suite": ""
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "prompts": "src/ai/prompts/",
+    "rag_pipeline": "src/ai/rag/",
+    "agents": "src/ai/agents/",
+    "evals": "src/ai/evals/"
+  },
+  "dependencies": ["architecture"],
+  "dependents": ["backend", "frontend", "qa", "observability", "data-engineer"],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

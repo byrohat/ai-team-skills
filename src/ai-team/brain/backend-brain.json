@@ -1,0 +1,39 @@
+{
+  "agent": "backend",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "framework": "",
+    "api_version": "v1",
+    "endpoints": [],
+    "models": [],
+    "auth_type": "",
+    "middleware": [],
+    "services": []
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "routes": "src/routes/",
+    "controllers": "src/controllers/",
+    "services": "src/services/",
+    "models": "src/models/"
+  },
+  "dependencies": [
+    "architecture"
+  ],
+  "dependents": [
+    "frontend",
+    "security"
+  ],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

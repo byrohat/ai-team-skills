@@ -1,0 +1,98 @@
+# AI Team Task Queue
+# Token-optimized task assignment format
+
+[meta]
+version = "1.0.0"
+queue_updated = ""
+next_task_id = 1
+
+[[tasks]]
+id = 1
+agent = "architecture"
+title = "Initialize project structure"
+description = "Create base project structure and tech stack selection"
+priority = "high"
+status = "pending"
+created_at = ""
+assigned_to = "architecture"
+depends_on = []
+estimated_lines = 100
+deliverable = "ARCHITECTURE.md, config/tech-stack.toml"
+
+[[tasks]]
+id = 2
+agent = "backend"
+title = "Setup backend framework"
+description = "Initialize backend with Express/Fastify, add auth middleware"
+priority = "high"
+status = "pending"
+created_at = ""
+assigned_to = "backend"
+depends_on = [1]
+estimated_lines = 200
+deliverable = "src/api/routes/, src/middleware/"
+
+[[tasks]]
+id = 3
+agent = "frontend"
+title = "Setup frontend framework"
+description = "Initialize React/Next.js with design system"
+priority = "high"
+status = "pending"
+created_at = ""
+assigned_to = "frontend"
+depends_on = [1]
+estimated_lines = 200
+deliverable = "src/components/, src/pages/"
+
+[[tasks]]
+id = 4
+agent = "security"
+title = "Security audit - Phase 1"
+description = "Initial security review of architecture"
+priority = "high"
+status = "pending"
+created_at = ""
+assigned_to = "security"
+depends_on = [1, 2]
+estimated_lines = 50
+deliverable = "SECURITY.md, security-report.json"
+
+[[tasks]]
+id = 5
+agent = "qa"
+title = "Setup testing infrastructure"
+description = "Configure Jest, Playwright, CI/CD pipelines"
+priority = "medium"
+status = "pending"
+created_at = ""
+assigned_to = "qa"
+depends_on = [1]
+estimated_lines = 100
+deliverable = "tests/, .github/workflows/test.yml"
+
+[[tasks]]
+id = 6
+agent = "docs"
+title = "Create project documentation"
+description = "Initial README, API docs, architecture docs"
+priority = "medium"
+status = "pending"
+created_at = ""
+assigned_to = "docs"
+depends_on = [1]
+estimated_lines = 100
+deliverable = "README.md, docs/"
+
+[[tasks]]
+id = 7
+agent = "privacy"
+title = "Privacy impact assessment"
+description = "GDPR/CCPA compliance check"
+priority = "medium"
+status = "pending"
+created_at = ""
+assigned_to = "privacy"
+depends_on = [2, 3]
+estimated_lines = 80
+deliverable = "PRIVACY.md, config/privacy.toml"

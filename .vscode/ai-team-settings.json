@@ -1,0 +1,116 @@
+{
+  "name": "AI Team Skills",
+  "version": "2.3.0",
+  "description": "Multi-agent AI development team system — 17 specialized agents, fully autonomous & project-aware",
+  "authors": ["ByRohat"],
+  "contributes": {
+    "configuration": {
+      "title": "AI Team Skills",
+      "properties": {
+        "aiTeam.autoActivate": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically activate AI Team on session start"
+        },
+        "aiTeam.maxFileLines": {
+          "type": "number",
+          "default": 1000,
+          "description": "Maximum lines per file (hard limit)"
+        },
+        "aiTeam.warnFileLines": {
+          "type": "number",
+          "default": 700,
+          "description": "Warning threshold — prepare to split when approaching this"
+        },
+        "aiTeam.brainDirectory": {
+          "type": "string",
+          "default": ".ai-team/brain",
+          "description": "Directory for brain storage files"
+        },
+        "aiTeam.qualityGates": {
+          "type": "array",
+          "default": ["security", "sre", "coverage", "docs", "file_size", "performance", "observability", "privacy"],
+          "description": "Enabled quality gates"
+        },
+        "aiTeam.securityVeto": {
+          "type": "boolean",
+          "default": true,
+          "description": "Security agent has VETO POWER — blocks deployment on any Critical/High vulnerability"
+        },
+        "aiTeam.sreDeploymentHold": {
+          "type": "boolean",
+          "default": true,
+          "description": "SRE agent has DEPLOYMENT HOLD POWER — SLOs + error budgets must be defined"
+        }
+      }
+    },
+    "markdownShortcuts": {
+      "definitions": [
+        {
+          "name": "team-status",
+          "template": "## AI Team Status\n\n**Project**: ${1:project-name}\n**Phase**: ${2:initiation}\n**Completion**: ${3:0}%\n\n### Team Status\n- Product Owner:   pending (0%)\n- Architecture:    pending (0%)\n- UX/UI Designer:  pending (0%)\n- AI Engineer:     pending (0%)\n- Data Engineer:   pending (0%)\n- Backend:         pending (0%)\n- Frontend:        pending (0%)\n- Mobile Engineer: pending (0%)\n- DevOps:          pending (0%)\n- SRE:             pending (0%)\n- Performance:     pending (0%)\n- Observability:   pending (0%)\n- Security:        pending (0%)\n- Privacy:         pending (0%)\n- QA:              pending (0%)\n- Docs:            pending (0%)\n\n### Active Blockers\nNone (All Clear)"
+        }
+      ]
+    }
+  },
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:javascript",
+    "onLanguage:python",
+    "onLanguage:go",
+    "onLanguage:rust",
+    "onLanguage:java",
+    "onLanguage:php",
+    "onLanguage:dart",
+    "onLanguage:swift",
+    "onLanguage:kotlin",
+    "workspaceContains:**/*.md"
+  ],
+  "aiTeam": {
+    "autoActivate": true,
+    "maxFileLines": 1000,
+    "warnFileLines": 700,
+    "brainDirectory": ".ai-team/brain",
+    "qualityGates": ["security", "sre", "coverage", "docs", "file_size", "performance", "observability", "privacy"],
+    "securityVeto": true,
+    "sreDeploymentHold": true,
+    "agents": [
+      { "name": "product-owner",   "file": ".claude/skills/product-owner.md",   "role": "Backlog, User Stories, RICE, OKR" },
+      { "name": "team-lead",       "file": ".claude/skills/team-lead.md",        "role": "Orchestrator" },
+      { "name": "architecture",    "file": ".claude/skills/architecture.md",     "role": "System Design, C4, ADR" },
+      { "name": "ux-designer",     "file": ".claude/skills/ux-designer.md",      "role": "Design Systems, Tokens, WCAG 2.2" },
+      { "name": "ai-engineer",     "file": ".claude/skills/ai-engineer.md",      "role": "LLM, RAG, Multi-Agent, LLMOps" },
+      { "name": "data-engineer",   "file": ".claude/skills/data-engineer.md",    "role": "ETL/ELT, dbt, Kafka, Airflow" },
+      { "name": "backend",         "file": ".claude/skills/backend.md",          "role": "API & Logic" },
+      { "name": "frontend",        "file": ".claude/skills/frontend.md",         "role": "UI/UX, Web Vitals, WCAG 2.2, i18n" },
+      { "name": "mobile-engineer", "file": ".claude/skills/mobile-engineer.md",  "role": "iOS/Android/RN/Flutter, App Store" },
+      { "name": "devops",          "file": ".claude/skills/devops.md",           "role": "Kubernetes, CI/CD, Secrets" },
+      { "name": "sre",             "file": ".claude/skills/sre.md",              "role": "SLO/SLI, Error Budgets, Chaos (HOLD)" },
+      { "name": "performance",     "file": ".claude/skills/performance.md",      "role": "Load Testing, Caching, Query Profiling" },
+      { "name": "observability",   "file": ".claude/skills/observability.md",    "role": "OpenTelemetry, Prometheus, Grafana" },
+      { "name": "security",        "file": ".claude/skills/security.md",         "role": "OWASP 2024, SAST/DAST (VETO)" },
+      { "name": "privacy",         "file": ".claude/skills/privacy.md",          "role": "GDPR, CCPA, KVKK, DPIA" },
+      { "name": "qa",              "file": ".claude/skills/qa.md",               "role": "Unit/Integration/Contract/Chaos Tests" },
+      { "name": "docs",            "file": ".claude/skills/docs.md",             "role": "OpenAPI, Runbooks, Post-mortems" }
+    ],
+    "dependencies": {
+      "product-owner":   { "manages": ["team-lead"], "blocks": ["architecture"] },
+      "team-lead":       { "manages": ["architecture","ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer","devops","sre","performance","observability","security","privacy","qa","docs"] },
+      "architecture":    { "blocks": ["ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer"] },
+      "ux-designer":     { "blocked_by": ["architecture"], "blocks": ["frontend","mobile-engineer"] },
+      "ai-engineer":     { "blocked_by": ["architecture"], "blocks": ["backend","frontend","qa","observability","data-engineer"] },
+      "data-engineer":   { "blocked_by": ["architecture","backend"], "blocks": ["ai-engineer","observability"] },
+      "backend":         { "blocked_by": ["architecture","ai-engineer"], "blocks": ["frontend","mobile-engineer","qa","observability"] },
+      "frontend":        { "blocked_by": ["architecture","backend","ai-engineer","ux-designer"], "blocks": ["performance"] },
+      "mobile-engineer": { "blocked_by": ["architecture","backend","ux-designer","ai-engineer"], "blocks": ["qa","performance","security"] },
+      "devops":          { "blocks": ["observability","sre","deployment"] },
+      "sre":             { "blocked_by": ["devops","observability"], "blocks": ["deployment"], "deployment_hold": true },
+      "performance":     { "blocked_by": ["frontend","mobile-engineer","qa"], "blocks": ["security","privacy","deployment"] },
+      "observability":   { "blocked_by": ["backend","devops","ai-engineer","data-engineer"], "blocks": ["sre","deployment"] },
+      "security":        { "blocked_by": ["performance"], "blocks": ["deployment"], "veto_power": true },
+      "privacy":         { "blocked_by": ["performance"], "blocks": ["deployment"] },
+      "qa":              { "blocked_by": ["backend","frontend","mobile-engineer","ai-engineer"], "blocks": ["performance"] },
+      "docs":            { "blocked_by": ["architecture","backend","frontend","mobile-engineer"] }
+    }
+  }
+}

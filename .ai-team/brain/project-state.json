@@ -1,0 +1,135 @@
+{
+  "schema_version": "2.3.0",
+  "project_id": "1749217370",
+  "project_name": "ai-team-skills",
+  "phase": "initiation",
+  "created_at": "2026-06-06T16:42:50+03:00",
+  "updated_at": "2026-06-22T00:00:00+00:00",
+  "components": {
+    "product-owner": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "architecture": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "ux-designer": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "ai-engineer": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "data-engineer": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "backend": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "frontend": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "mobile-engineer": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "devops": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "sre": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "performance": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "observability": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "security": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "privacy": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "qa": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "docs": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    }
+  },
+  "blockers": [],
+  "deployment_ready": false,
+  "profile_ref": "project-profile.json",
+  "narrative": "AI Team Skills framework repo itself. As of v2.3.0 the framework gained four Core Protocols (Continuity, Adaptation, Self-Evolution, Clarification), a Project DNA brain file (project-profile.json), and a propose-don't-edit channel (proposed-improvements.md). All 17 skills carry an Operating Protocols block and were quality-reviewed. This is the framework's own brain, kept as a worked example.",
+  "last_session_summary": "v2.3.0 smart-skills upgrade completed: added _core-protocols.md, project-profile.json + proposed-improvements.json/md, upgraded all 17 skills and all 7 activation files, added 5 missing brain templates, brought install.ps1 to parity.",
+  "open_questions": [],
+  "session_log": [
+    {
+      "date": "2026-06-22",
+      "event": "v2.3.0 smart-skills upgrade (4 Core Protocols + Project DNA + quality review of all 17 skills)"
+    }
+  ],
+  "version": "2.3.0"
+}

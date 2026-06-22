@@ -1,0 +1,155 @@
+{
+  "$schema": "./schemas/project-profile.schema.json",
+  "schema_version": "2.3.0",
+  "_comment": "PROJECT DNA \u2014 read this FIRST every session (Continuity + Adaptation protocols). A fresh chat reads this file to understand WHAT the project is, not just how far along it is. Populate it during initialization by detecting the stack from the repo; keep it current as decisions are made.",
+  "project_id": "1749217370",
+  "project_name": "ai-team-skills",
+  "one_liner": "Enterprise multi-agent AI development team framework with cross-session brain memory, usable across IDEs.",
+  "description": "A framework that turns any AI coding assistant into a 17-agent engineering team. Agents are markdown skill files; durable state lives in JSON/TOML brain files; auto-activation files wire it into Claude Code, Cursor, Windsurf, Antigravity, Trae, Codex CLI, and VS Code.",
+  "domain": "Developer tooling / AI agent framework",
+  "stage": "mature",
+  "north_star": "Make AI assistants behave like a complete, project-aware engineering team \u2014 continuous across sessions and consistent across IDEs.",
+  "primary_users": [
+    "Developers using AI coding assistants",
+    "Teams wanting enforced quality gates"
+  ],
+  "stack": {
+    "languages": [
+      "Markdown",
+      "JSON",
+      "TOML",
+      "Bash",
+      "PowerShell",
+      "Python",
+      "TypeScript"
+    ],
+    "frontend": {
+      "framework": "",
+      "version": "",
+      "styling": "",
+      "state": "",
+      "package_manager": ""
+    },
+    "backend": {
+      "framework": "",
+      "language": "",
+      "runtime": "",
+      "package_manager": ""
+    },
+    "mobile": {
+      "framework": "",
+      "platforms": []
+    },
+    "database": {
+      "primary": "",
+      "version": "",
+      "orm": "",
+      "cache": "",
+      "search": ""
+    },
+    "ai": {
+      "providers": [],
+      "models": [],
+      "vector_db": ""
+    },
+    "data": {
+      "warehouse": "",
+      "orchestrator": "",
+      "streaming": "",
+      "transform": ""
+    },
+    "infra": {
+      "cloud": "",
+      "containers": "",
+      "orchestration": "",
+      "iac": "",
+      "ci_cd": "n/a (config framework; ships install.sh + install.ps1)"
+    },
+    "observability": {
+      "tracing": "",
+      "metrics": "",
+      "logging": "",
+      "errors": ""
+    }
+  },
+  "conventions": {
+    "naming": "kebab-case skill files; <agent>-brain.json brain files",
+    "folder_structure": ".claude/skills (source of truth) mirrored to .cursor/skills and .windsurf/skills; brain templates in src/ai-team/brain; live brain in .ai-team/brain",
+    "branching": "",
+    "commit_style": "",
+    "api_style": "",
+    "error_handling": "",
+    "testing": "",
+    "code_style": "max 1000 lines per file (warn at 700); skill files <500 line body ideal"
+  },
+  "glossary": [
+    {
+      "term": "Brain",
+      "definition": "Durable cross-session memory: JSON/TOML files under .ai-team/brain/"
+    },
+    {
+      "term": "Skill",
+      "definition": "A markdown file defining an agent persona, standards, and quality gates"
+    },
+    {
+      "term": "Project DNA",
+      "definition": "project-profile.json \u2014 stack/domain/conventions/glossary/decisions read first each session"
+    },
+    {
+      "term": "Core Protocols",
+      "definition": "The 4 cross-cutting behaviors in _core-protocols.md: Continuity, Adaptation, Self-Evolution, Clarification"
+    },
+    {
+      "term": "VETO",
+      "definition": "Security agent can block deployment on any Critical/High finding"
+    },
+    {
+      "term": "HOLD",
+      "definition": "SRE agent can hold deployment until SLOs + error budgets are defined"
+    }
+  ],
+  "key_decisions": [
+    {
+      "id": "KD-1",
+      "date": "2026-06-21",
+      "decision": "Raise file-size hard limit 700 -> 1000 (warn at 700)",
+      "rationale": "Skill files need room for templates/examples"
+    },
+    {
+      "id": "KD-2",
+      "date": "2026-06-21",
+      "decision": "Add 4 agents: ux-designer, data-engineer, sre, mobile-engineer",
+      "rationale": "Cover full delivery lifecycle"
+    },
+    {
+      "id": "KD-3",
+      "date": "2026-06-22",
+      "decision": "Add 4 Core Protocols + Project DNA + propose-don't-edit self-evolution",
+      "rationale": "Make skills project-aware, continuous, and safely self-improving"
+    }
+  ],
+  "constraints": [
+    "max-1000-lines-per-file",
+    "skill mirrors (.claude/.cursor/.windsurf) must stay in sync"
+  ],
+  "non_goals": [
+    "Not a runtime/app \u2014 it does not execute application code",
+    "Not tied to a single IDE"
+  ],
+  "environments": {
+    "local": "",
+    "staging": "",
+    "production": ""
+  },
+  "integrations": [],
+  "compliance": [],
+  "open_questions": [],
+  "detected_from": [
+    "skill.json",
+    "CLAUDE.md",
+    ".claude/skills/",
+    "install.sh"
+  ],
+  "created_at": "2026-06-22T00:00:00+00:00",
+  "updated_at": "2026-06-22T00:00:00+00:00"
+}

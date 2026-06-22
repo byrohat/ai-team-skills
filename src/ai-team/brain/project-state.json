@@ -1,0 +1,132 @@
+{
+  "$schema": "./schemas/project-state.schema.json",
+  "schema_version": "2.3.0",
+  "profile_ref": "project-profile.json",
+  "project_id": "",
+  "project_name": "",
+  "narrative": "",
+  "phase": "initiation",
+  "last_session_summary": "",
+  "created_at": "",
+  "updated_at": "",
+  "components": {
+    "product-owner": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "architecture": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "ux-designer": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "ai-engineer": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "data-engineer": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "backend": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "frontend": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "mobile-engineer": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "devops": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "sre": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "performance": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "observability": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "security": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "privacy": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "qa": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
+    "docs": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    }
+  },
+  "blockers": [],
+  "open_questions": [],
+  "session_log": [],
+  "deployment_ready": false,
+  "last_deployment_check": null,
+  "version": "2.3.0"
+}

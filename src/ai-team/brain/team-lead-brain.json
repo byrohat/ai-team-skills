@@ -1,0 +1,40 @@
+{
+  "agent": "team-lead",
+  "version": "2.3.0",
+  "project_id": "",
+  "project_name": "",
+  "initialized_at": null,
+  "last_update": null,
+  "memory": {
+    "active_tasks": [],
+    "completed_tasks": [],
+    "blockers": [],
+    "key_decisions": [],
+    "team_notes": []
+  },
+  "state": {
+    "phase": "initiation",
+    "deployment_ready": false,
+    "last_deployment_check": null
+  },
+  "team_status": {
+    "architecture": "pending",
+    "backend": "pending",
+    "frontend": "pending",
+    "security": "pending",
+    "privacy": "pending",
+    "qa": "pending",
+    "docs": "pending"
+  },
+  "configuration": {
+    "max_file_lines": 700,
+    "token_optimization": true,
+    "auto_activate": true,
+    "quality_gates_enabled": true
+  },
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

@@ -1,0 +1,36 @@
+{
+  "agent": "devops",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "cloud": "",
+    "containers": "",
+    "orchestration": "",
+    "ci_cd": "",
+    "iac": "",
+    "secrets_manager": "",
+    "registry": "",
+    "environments": { "local": "", "staging": "", "production": "" },
+    "pipelines": []
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "dockerfiles": "Dockerfile, docker-compose.yml",
+    "k8s_manifests": "k8s/",
+    "ci_cd": ".github/workflows/",
+    "iac": "infra/"
+  },
+  "dependencies": [],
+  "dependents": ["observability", "sre", "deployment"],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

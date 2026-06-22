@@ -1,0 +1,32 @@
+{
+  "agent": "performance",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "targets": { "api_p95_ms": 200, "lcp_ms": 2500, "inp_ms": 200, "cls": 0.1, "lighthouse": 90 },
+    "caching": { "strategy": "", "layers": [], "ttl": {} },
+    "indexes": [],
+    "load_tests": [],
+    "bottlenecks": [],
+    "budgets": { "js_kb": 0, "image_kb": 0 }
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "load_tests": "tests/load/",
+    "perf_report": "docs/performance-report.md",
+    "cache_config": "config/cache/"
+  },
+  "dependencies": ["frontend", "mobile-engineer", "qa"],
+  "dependents": ["security", "privacy", "deployment"],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

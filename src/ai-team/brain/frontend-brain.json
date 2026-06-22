@@ -1,0 +1,48 @@
+{
+  "agent": "frontend",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "framework": "",
+    "design_system": "",
+    "design_tokens": {
+      "colors": {},
+      "typography": {},
+      "spacing": {}
+    },
+    "pages": [],
+    "components": [],
+    "ui_ux_pro_max": {
+      "style": "",
+      "palette": "",
+      "typography": "",
+      "last_sync": null
+    }
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "components": "src/components/",
+    "pages": "src/pages/",
+    "hooks": "src/hooks/",
+    "stores": "src/stores/"
+  },
+  "dependencies": [
+    "architecture",
+    "backend"
+  ],
+  "dependents": [
+    "security",
+    "qa"
+  ],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

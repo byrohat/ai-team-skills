@@ -1,0 +1,33 @@
+{
+  "agent": "observability",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "tracing": { "backend": "", "sdk": "OpenTelemetry", "sampling": "" },
+    "metrics": { "backend": "Prometheus", "exporters": [] },
+    "logging": { "format": "json", "aggregator": "", "correlation": true },
+    "errors": { "tool": "" },
+    "dashboards": [],
+    "slos_tracked": [],
+    "alerts": []
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "otel_config": "config/otel/",
+    "dashboards": "observability/dashboards/",
+    "alert_rules": "observability/alerts/"
+  },
+  "dependencies": ["backend", "devops", "ai-engineer", "data-engineer"],
+  "dependents": ["sre", "deployment"],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

@@ -1,0 +1,34 @@
+{
+  "agent": "product-owner",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "backlog_size": 0,
+    "sprint": { "number": 0, "goal": "", "committed_points": 0, "completed_points": 0 },
+    "personas": [],
+    "okrs": [],
+    "active_flags": [],
+    "active_experiments": [],
+    "product_metrics": { "framework": "", "north_star_metric": "", "current": {} }
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "backlog": "docs/backlog.md",
+    "user_stories": "docs/user-stories/",
+    "okrs": "docs/okrs.md",
+    "release_notes": "docs/releases/"
+  },
+  "dependencies": [],
+  "dependents": ["team-lead", "architecture"],
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

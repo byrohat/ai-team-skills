@@ -1,0 +1,51 @@
+{
+  "agent": "architecture",
+  "version": "2.3.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "architecture_type": "",
+    "stack": {
+      "frontend": {
+        "framework": "",
+        "version": "",
+        "package_manager": ""
+      },
+      "backend": {
+        "framework": "",
+        "runtime": "",
+        "package_manager": ""
+      },
+      "database": {
+        "type": "",
+        "version": "",
+        "orm": ""
+      },
+      "cache": {
+        "type": "",
+        "version": ""
+      }
+    },
+    "patterns": [],
+    "decisions": [],
+    "constraints": [
+      "max-1000-lines"
+    ]
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "architecture_doc": "ARCHITECTURE.md",
+    "tech_stack_config": "config/tech-stack.toml",
+    "file_structure": "docs/file-structure.md"
+  },
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

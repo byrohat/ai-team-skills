@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+cli/node_modules/
+
+# Build output
+cli/dist/
+dist/
+build/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor cruft (note: .vscode/ai-team-settings.json IS tracked on purpose)
+.idea/
+*.swp
+*~
+
+# AI Team runtime artifacts (regenerated per project by the installer)
+.ai-team/brain/audit-log.jsonl
+.ai-team/brain/messages/
+.ai-team/*.js
