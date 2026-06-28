@@ -128,7 +128,11 @@ Product Owner: Requirement Decomposition (INVEST, User Stories, Gherkin, RICE)
     ▼
 Team Lead: Analyze → Decompose → Prioritize (Assign Sprint Tasks)
     │
-    ├──► Architecture Agent (design first, C4 Model L3/L4)
+    ├──► Technology Strategist (BEFORE implementation, when stack is unratified/uncertain)
+    │        └── Runs `/team-stack`: needs-based stack decision, matrix, ≥3 alternatives,
+    │            risks, draft ADR → Blocks: Architecture (until decision proposed)
+    │
+    ├──► Architecture Agent (ratifies the tech decision into an ADR, design first, C4 Model L3/L4)
     │        └── Blocks: Backend, Frontend, AI Engineer, UX Designer, Mobile start
     │
     ├──► UX/UI Designer Agent (after Architecture)
@@ -327,6 +331,7 @@ Every status report MUST follow this structure:
 | Agent | Status | Progress | Blockers |
 |-------|--------|----------|---------|
 | Product Owner | ✅ Complete | 100% | None |
+| Technology Strategist | ✅ Complete | 100% | None |
 | Architecture | ✅ Complete | 100% | None |
 | UX/UI Designer | 🔄 In Progress | 60% | None |
 | AI Engineer | 🔄 In Progress | 80% | None |

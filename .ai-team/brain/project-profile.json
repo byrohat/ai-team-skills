@@ -5,7 +5,7 @@
   "project_id": "1749217370",
   "project_name": "ai-team-skills",
   "one_liner": "Enterprise multi-agent AI development team framework with cross-session brain memory, usable across IDEs.",
-  "description": "A framework that turns any AI coding assistant into a 17-agent engineering team. Agents are markdown skill files; durable state lives in JSON/TOML brain files; auto-activation files wire it into Claude Code, Cursor, Windsurf, Antigravity, Trae, Codex CLI, and VS Code.",
+  "description": "A framework that turns any AI coding assistant into a 18-agent engineering team. Agents are markdown skill files; durable state lives in JSON/TOML brain files; auto-activation files wire it into Claude Code, Cursor, Windsurf, Antigravity, Trae, Codex CLI, and VS Code.",
   "domain": "Developer tooling / AI agent framework",
   "stage": "mature",
   "north_star": "Make AI assistants behave like a complete, project-aware engineering team \u2014 continuous across sessions and consistent across IDEs.",
@@ -126,6 +126,12 @@
       "date": "2026-06-22",
       "decision": "Add 4 Core Protocols + Project DNA + propose-don't-edit self-evolution",
       "rationale": "Make skills project-aware, continuous, and safely self-improving"
+    },
+    {
+      "id": "KD-4",
+      "date": "2026-06-28",
+      "decision": "Add 18th agent Technology Strategist + /team-stack command + Protocol 5 (Technology Decision); bump framework to 2.4.0",
+      "rationale": "Select language/framework/architecture/stack on real technical needs and growth — never popularity; Strategist proposes (matrix, >=3 alternatives, risks, draft ADR), Architecture ratifies, Security may veto, SRE/DevOps weigh operability+cost"
     }
   ],
   "constraints": [

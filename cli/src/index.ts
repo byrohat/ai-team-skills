@@ -16,15 +16,21 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const program = new Command();
 
-// All 11 skill files to copy
+// All skill files to copy (18 agents + shared core protocols + INSTALL guide)
 const SKILL_FILES = [
+  '_core-protocols.md',
   'product-owner.md',
   'team-lead.md',
+  'tech-strategist.md',
   'architecture.md',
+  'ux-designer.md',
   'ai-engineer.md',
+  'data-engineer.md',
   'backend.md',
   'frontend.md',
+  'mobile-engineer.md',
   'devops.md',
+  'sre.md',
   'performance.md',
   'observability.md',
   'security.md',
@@ -78,6 +84,7 @@ async function copySkillFiles(targetDir: string, platform: string) {
       updated_at: new Date().toISOString(),
       components: {
         'product-owner': { status: 'pending', progress: 0, issues: [], remaining: [] },
+        'tech-strategist': { status: 'pending', progress: 0, issues: [], remaining: [] },
         architecture: { status: 'pending', progress: 0, issues: [], remaining: [] },
         'ai-engineer': { status: 'pending', progress: 0, issues: [], remaining: [] },
         backend: { status: 'pending', progress: 0, issues: [], remaining: [] },

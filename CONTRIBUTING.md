@@ -1,7 +1,7 @@
 # Contributing to AI Team Skills
 
 Thanks for your interest in improving **AI Team Skills**! This framework turns AI coding
-assistants into a coordinated 17-agent engineering team, and contributions of all sizes are welcome —
+assistants into a coordinated 18-agent engineering team, and contributions of all sizes are welcome —
 new agents, better protocols, platform support, docs, and bug fixes.
 
 ## Ways to contribute

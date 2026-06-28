@@ -6,13 +6,13 @@
 
 ### A complete, autonomous AI engineering team for your codebase — across every major AI IDE.
 
-[![Version](https://img.shields.io/badge/version-2.3.0-2563EB.svg)](https://github.com/ByRohat/ai-team-skills)
+[![Version](https://img.shields.io/badge/version-2.4.0-2563EB.svg)](https://github.com/ByRohat/ai-team-skills)
 [![License: MIT](https://img.shields.io/badge/license-MIT-22C55E.svg)](LICENSE)
 [![Agents](https://img.shields.io/badge/agents-17-8B5CF6.svg)](#-the-team)
 [![Platforms](https://img.shields.io/badge/platforms-8-F59E0B.svg)](#-platform-support)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-14B8A6.svg)](#-contributing)
 
-**17 specialized agents · 4 core protocols · cross-session memory · fully autonomous activation**
+**18 specialized agents · 4 core protocols · cross-session memory · fully autonomous activation**
 
 [Quick Start](#-quick-start) • [Platforms](#-platform-support) • [The Team](#-the-team) • [How It Works](#-how-it-works) • [Quality Gates](#-quality-gates) • [Brain](#-brain-storage)
 
@@ -22,7 +22,7 @@
 
 ## Overview
 
-**AI Team Skills** turns any AI coding assistant into a coordinated, enterprise-grade engineering team. Instead of one generalist model, you get **17 specialized agents** — from Product Owner to SRE — that share a durable memory, enforce quality gates, and adapt to *your* project.
+**AI Team Skills** turns any AI coding assistant into a coordinated, enterprise-grade engineering team. Instead of one generalist model, you get **18 specialized agents** — from Product Owner to SRE — that share a durable memory, enforce quality gates, and adapt to *your* project.
 
 It activates itself. Open your project in a supported IDE and the team reads its brain, understands where the project stands, and gets to work — **you never type "activate."**
 
@@ -114,6 +114,7 @@ And one meta-protocol that ties it together:
 |-------|------|:-------------:|
 | **Product Owner** | Backlog grooming, user stories, RICE scoring, OKR alignment | — |
 | **Team Lead** | Orchestrates all agents, tracks sprint velocity & risk register | — |
+| **Technology Strategist** | Technology Decision Protocol — needs-based stack/language/architecture selection, decision matrix, alternatives, draft ADR | — |
 | **Architecture** | System design, event-driven patterns, C4 diagrams, ADR registry | — |
 | **UX/UI Designer** | Design systems, tokens, wireframes, WCAG 2.2, design-dev handoff | — |
 | **AI Engineer** | LLM integrations, RAG pipelines, multi-agent orchestration, LLMOps | — |
@@ -214,6 +215,7 @@ Every `<agent>-brain.json` carries continuity/evolution fields — `last_session
 | `/team-next` | Fetch the next task from the queue |
 | `/deploy-check` | Deployment-readiness verification (runs the gates) |
 | `/team-init` | Initialize project configuration |
+| `/team-stack` | Technology Decision Protocol — needs-based stack/language/architecture selection |
 | `/team-sprint` | Sprint planning & velocity |
 | `/team-adr` | Generate an Architecture Decision Record |
 | `/team-retro` | Generate a sprint retrospective |
@@ -237,15 +239,15 @@ Every `<agent>-brain.json` carries continuity/evolution fields — `last_session
 
 ```
 ai-team-skills/
-├── .claude/skills/            # 17 agent skill files + _core-protocols.md (source of truth)
+├── .claude/skills/            # 18 agent skill files + _core-protocols.md (source of truth)
 ├── .cursor/  .windsurf/       # skill mirrors + native auto-load rules
 ├── .trae/  .agents/  .github/ # platform-native auto-load rule files
 ├── CLAUDE.md  AGENTS.md  GEMINI.md  ANTIGRAVITY.md  AI-TEAM.md
 ├── .cursorrules  .windsurfrules
 ├── install.sh  install.ps1    # cross-platform installers
-├── skill.json                 # canonical manifest (v2.3.0)
+├── skill.json                 # canonical manifest (v2.4.0)
 ├── src/ai-team/
-│   ├── brain/                 # brain templates (profile + state + 17 agents)
+│   ├── brain/                 # brain templates (profile + state + 18 agents)
 │   └── scripts/               # brain manager, agent comms, auto-activator (Python)
 └── cli/                       # TypeScript CLI (`aiteam`)
 ```

@@ -33,6 +33,15 @@ Before doing system design work, run the four cross-cutting protocols defined in
 | **Scalability Planning** | Horizontal/vertical scaling, caching, CDN strategies |
 | **Architecture Drift Detection** | Validate implementation against design |
 
+> **Tech Stack Governance — boundary with the Technology Strategist.** For new projects, large
+> modules, or significant technical choices, the **Technology Strategist**
+> (`.claude/skills/tech-strategist.md`, `/team-stack`) runs the **Technology Decision Protocol** and
+> *proposes* the stack (decision matrix, ≥3 alternatives, risks, mitigations, draft ADR). Architecture
+> **ratifies** that decision into a formal ADR under `docs/adr/` and owns architectural integrity,
+> drift detection, and C4 modeling afterward. Architecture never silently overrides an accepted tech
+> decision — a disagreement becomes an `open_question` for the user. When no Technology Strategist run
+> is needed (the existing ratified stack already fits), Architecture proceeds directly.
+
 ---
 
 ## Architecture Patterns & Design Methodologies

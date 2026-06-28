@@ -1,7 +1,7 @@
 {
   "name": "AI Team Skills",
-  "version": "2.3.0",
-  "description": "Multi-agent AI development team system — 17 specialized agents, fully autonomous & project-aware",
+  "version": "2.4.0",
+  "description": "Multi-agent AI development team system — 18 specialized agents, fully autonomous & project-aware",
   "authors": ["ByRohat"],
   "contributes": {
     "configuration": {
@@ -48,7 +48,7 @@
       "definitions": [
         {
           "name": "team-status",
-          "template": "## AI Team Status\n\n**Project**: ${1:project-name}\n**Phase**: ${2:initiation}\n**Completion**: ${3:0}%\n\n### Team Status\n- Product Owner:   pending (0%)\n- Architecture:    pending (0%)\n- UX/UI Designer:  pending (0%)\n- AI Engineer:     pending (0%)\n- Data Engineer:   pending (0%)\n- Backend:         pending (0%)\n- Frontend:        pending (0%)\n- Mobile Engineer: pending (0%)\n- DevOps:          pending (0%)\n- SRE:             pending (0%)\n- Performance:     pending (0%)\n- Observability:   pending (0%)\n- Security:        pending (0%)\n- Privacy:         pending (0%)\n- QA:              pending (0%)\n- Docs:            pending (0%)\n\n### Active Blockers\nNone (All Clear)"
+          "template": "## AI Team Status\n\n**Project**: ${1:project-name}\n**Phase**: ${2:initiation}\n**Completion**: ${3:0}%\n\n### Team Status\n- Product Owner:   pending (0%)\n- Technology Strategist: pending (0%)\n- Architecture:    pending (0%)\n- UX/UI Designer:  pending (0%)\n- AI Engineer:     pending (0%)\n- Data Engineer:   pending (0%)\n- Backend:         pending (0%)\n- Frontend:        pending (0%)\n- Mobile Engineer: pending (0%)\n- DevOps:          pending (0%)\n- SRE:             pending (0%)\n- Performance:     pending (0%)\n- Observability:   pending (0%)\n- Security:        pending (0%)\n- Privacy:         pending (0%)\n- QA:              pending (0%)\n- Docs:            pending (0%)\n\n### Active Blockers\nNone (All Clear)"
         }
       ]
     }
@@ -77,6 +77,7 @@
     "agents": [
       { "name": "product-owner",   "file": ".claude/skills/product-owner.md",   "role": "Backlog, User Stories, RICE, OKR" },
       { "name": "team-lead",       "file": ".claude/skills/team-lead.md",        "role": "Orchestrator" },
+      { "name": "tech-strategist", "file": ".claude/skills/tech-strategist.md",  "role": "Technology Decision Protocol — needs-based stack selection" },
       { "name": "architecture",    "file": ".claude/skills/architecture.md",     "role": "System Design, C4, ADR" },
       { "name": "ux-designer",     "file": ".claude/skills/ux-designer.md",      "role": "Design Systems, Tokens, WCAG 2.2" },
       { "name": "ai-engineer",     "file": ".claude/skills/ai-engineer.md",      "role": "LLM, RAG, Multi-Agent, LLMOps" },
@@ -95,8 +96,9 @@
     ],
     "dependencies": {
       "product-owner":   { "manages": ["team-lead"], "blocks": ["architecture"] },
-      "team-lead":       { "manages": ["architecture","ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer","devops","sre","performance","observability","security","privacy","qa","docs"] },
-      "architecture":    { "blocks": ["ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer"] },
+      "team-lead":       { "manages": ["tech-strategist","architecture","ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer","devops","sre","performance","observability","security","privacy","qa","docs"] },
+      "tech-strategist": { "blocked_by": ["product-owner"], "blocks": ["architecture"] },
+      "architecture":    { "blocked_by": ["tech-strategist"], "blocks": ["ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer"] },
       "ux-designer":     { "blocked_by": ["architecture"], "blocks": ["frontend","mobile-engineer"] },
       "ai-engineer":     { "blocked_by": ["architecture"], "blocks": ["backend","frontend","qa","observability","data-engineer"] },
       "data-engineer":   { "blocked_by": ["architecture","backend"], "blocks": ["ai-engineer","observability"] },

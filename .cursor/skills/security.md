@@ -391,6 +391,24 @@ When a Critical or High vulnerability is found:
 
 ---
 
+## Technology Decision Veto (stack/dependency choices)
+
+Security's VETO is not limited to deployment — it also applies during the **Technology Decision Protocol**
+run by the **Technology Strategist** (`/team-stack`). When a candidate technology, runtime, framework, or
+dependency is reviewed, **VETO** it (remove it from the candidate set) when it presents an unacceptable risk:
+
+- Unmaintained / end-of-life runtime or framework, or one with a poor security track record.
+- A dependency with known unpatched Critical/High CVEs, or a weak/compromised supply chain.
+- A technology that cannot meet the project's compliance or trust-boundary requirements (e.g. no FIPS path
+  where required, no secure secrets story, unsafe-by-default serialization).
+- A choice that forces an insecure pattern (e.g. mandatory HS256, no parameterized queries, no sandboxing).
+
+Record the verdict in the decision's `security_verdict` field (`approved` | `veto` | `pending`) and notify
+the Technology Strategist + Team Lead. A vetoed technology is not selectable until the risk is mitigated or
+an explicit, documented user sign-off accepts the residual risk.
+
+---
+
 ## Brain Storage
 
 Save to `.ai-team/brain/security-brain.json`:
