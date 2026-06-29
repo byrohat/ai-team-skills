@@ -13,6 +13,13 @@
       "remaining": [],
       "completed_at": null
     },
+    "tech-strategist": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
     "architecture": {
       "status": "pending",
       "progress": 0,
@@ -122,14 +129,18 @@
   "blockers": [],
   "deployment_ready": false,
   "profile_ref": "project-profile.json",
-  "narrative": "AI Team Skills framework repo itself. As of v2.3.0 the framework gained four Core Protocols (Continuity, Adaptation, Self-Evolution, Clarification), a Project DNA brain file (project-profile.json), and a propose-don't-edit channel (proposed-improvements.md). All 17 skills carry an Operating Protocols block and were quality-reviewed. This is the framework's own brain, kept as a worked example.",
-  "last_session_summary": "v2.3.0 smart-skills upgrade completed: added _core-protocols.md, project-profile.json + proposed-improvements.json/md, upgraded all 17 skills and all 7 activation files, added 5 missing brain templates, brought install.ps1 to parity.",
+  "narrative": "AI Team Skills framework repo itself. v2.3.0 added four Core Protocols (Continuity, Adaptation, Self-Evolution, Clarification), a Project DNA brain file (project-profile.json), and a propose-don't-edit channel (proposed-improvements.md). v2.4.0 adds the 18th agent — Technology Strategist — and the Technology Decision Protocol (Protocol 5) with the /team-stack command: needs-based language/framework/architecture/stack selection (never popularity), decision matrix, >=3 alternatives, risks, mitigations and a draft ADR that Architecture ratifies. All 18 skills carry an Operating Protocols block. This is the framework's own brain, kept as a worked example.",
+  "last_session_summary": "v2.4.0: added Technology Strategist (18th agent) + /team-stack + Protocol 5. Wired ownership boundary into architecture, orchestration+roster into team-lead, technology/dependency VETO into security. Registered in skill.json (agent, command, brain, dependencies; bumped 2.4.0), propagated agent table/command/version/17->18 across all activation+rule+mirror files, completed CLI SKILL_FILES, and updated the brain scripts (auto-activator + brain_manager) to seed/restore/validate the full 18-agent roster.",
   "open_questions": [],
   "session_log": [
     {
       "date": "2026-06-22",
       "event": "v2.3.0 smart-skills upgrade (4 Core Protocols + Project DNA + quality review of all 17 skills)"
+    },
+    {
+      "date": "2026-06-28",
+      "event": "v2.4.0: added Technology Strategist (18th agent) + Technology Decision Protocol (Protocol 5) + /team-stack; full multi-platform propagation + script roster sync"
     }
   ],
-  "version": "2.3.0"
+  "version": "2.4.0"
 }

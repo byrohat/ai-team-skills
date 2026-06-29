@@ -1,6 +1,6 @@
 {
   "name": "ai-team-skills",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Enterprise-grade Multi-agent AI development team system for fullstack projects — project-aware, self-adapting, and continuous across sessions",
   "author": "ByRohat",
   "license": "MIT",
@@ -49,6 +49,12 @@
       "name": "team-lead",
       "file": ".claude/skills/team-lead.md",
       "description": "Project coordination, sprint metrics, velocity tracking, risk matrix, ADR management",
+      "priority": 1
+    },
+    {
+      "name": "tech-strategist",
+      "file": ".claude/skills/tech-strategist.md",
+      "description": "Technology Decision Protocol — needs-based language/framework/architecture/stack selection (never popularity), decision matrix, alternatives, risks, draft ADR",
       "priority": 1
     },
     {
@@ -151,6 +157,7 @@
       "proposed-improvements.md",
       "product-owner-brain.json",
       "team-lead-brain.json",
+      "tech-strategist-brain.json",
       "architecture-brain.json",
       "ux-designer-brain.json",
       "ai-engineer-brain.json",
@@ -177,6 +184,7 @@
     "deploy-check": "Deployment readiness check",
     "team-init": "Initialize project",
     "team-context": "Show current context",
+    "team-stack": "Technology Decision Protocol — needs-based stack/language/architecture selection",
     "team-sprint": "Sprint planning and velocity management",
     "team-adr": "Spawn new Architecture Decision Record",
     "team-retro": "Generate sprint retrospective",
@@ -191,8 +199,9 @@
   },
   "agent_dependencies": {
     "product-owner":    { "manages": ["team-lead"], "blocks": ["architecture"], "blocked_by": [] },
-    "team-lead":        { "manages": ["architecture","ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer","devops","sre","performance","observability","security","privacy","qa","docs"], "blocks": ["deployment"], "blocked_by": ["product-owner"] },
-    "architecture":     { "manages": [], "blocks": ["ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer"], "blocked_by": [] },
+    "team-lead":        { "manages": ["tech-strategist","architecture","ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer","devops","sre","performance","observability","security","privacy","qa","docs"], "blocks": ["deployment"], "blocked_by": ["product-owner"] },
+    "tech-strategist":  { "manages": [], "blocks": ["architecture"], "blocked_by": ["product-owner"] },
+    "architecture":     { "manages": [], "blocks": ["ux-designer","ai-engineer","data-engineer","backend","frontend","mobile-engineer"], "blocked_by": ["tech-strategist"] },
     "ux-designer":      { "manages": [], "blocks": ["frontend","mobile-engineer"], "blocked_by": ["architecture","product-owner"] },
     "ai-engineer":      { "manages": [], "blocks": ["backend","frontend","qa","observability","data-engineer"], "blocked_by": ["architecture"] },
     "data-engineer":    { "manages": [], "blocks": ["ai-engineer","observability"], "blocked_by": ["architecture","backend"] },

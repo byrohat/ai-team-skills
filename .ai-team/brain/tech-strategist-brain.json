@@ -1,0 +1,26 @@
+{
+  "agent": "tech-strategist",
+  "version": "2.4.0",
+  "project_id": "",
+  "last_update": null,
+  "memory": {
+    "tech_decisions": [],
+    "default_architecture": "",
+    "weights_profile": {}
+  },
+  "state": {
+    "status": "pending",
+    "progress": 0,
+    "issues": [],
+    "remaining": []
+  },
+  "deliverables": {
+    "decision_record": "docs/adr/",
+    "stack_profile": ".ai-team/brain/project-profile.json"
+  },
+  "last_session_summary": "",
+  "learnings": [],
+  "conventions_used": [],
+  "open_questions": [],
+  "proposed_improvements": []
+}

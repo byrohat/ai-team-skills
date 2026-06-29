@@ -17,6 +17,13 @@
       "remaining": [],
       "completed_at": null
     },
+    "tech-strategist": {
+      "status": "pending",
+      "progress": 0,
+      "issues": [],
+      "remaining": [],
+      "completed_at": null
+    },
     "architecture": {
       "status": "pending",
       "progress": 0,

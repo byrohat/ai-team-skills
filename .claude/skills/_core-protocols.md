@@ -171,6 +171,32 @@ The cost of a wrong assumption — not the mere presence of ambiguity — is wha
 
 ---
 
+## Protocol 5 — Technology Decision (decide the stack on need, never popularity)
+
+**Intent:** No project or large module starts implementation on an unjustified stack. Before significant
+technical choices, the **Technology Strategist** (`.claude/skills/tech-strategist.md`, command `/team-stack`)
+runs the Technology Decision Protocol so the team picks the *healthiest* technology for **this** system —
+weighed on real needs, team reality, growth scenario and operating cost — not on what is popular, modern,
+fast, easy, or old.
+
+**Trigger the decision flow (`/team-stack`) before implementation when:**
+- A new project is initialized and `project-profile.json` has no ratified stack.
+- A new large module/service has needs different from the existing stack (AI service, realtime layer,
+  data pipeline, worker tier).
+- A significant choice is open: core language, primary framework, datastore, queue, realtime transport,
+  deployment topology, or a heavyweight external dependency.
+- The stack is uncertain or agents disagree.
+
+**Who decides:** Technology Strategist *proposes* (decision matrix, ≥3 alternatives, risks, mitigations,
+draft ADR); **Architecture** *ratifies* into a formal ADR and owns it afterward. **Security** may **VETO**
+risky tech/dependency choices; **SRE/DevOps** weigh operability, scaling and runtime cost; **AI/Data**
+justify the AI/RAG/pipeline stack. The decision is recorded to `tech-strategist-brain.json` and the
+`project-profile.json` stack. If a still-valid decision already covers the work, reference its ADR instead
+of re-running. This protocol composes with **Protocol 4** — when a non-functional requirement (scale,
+latency, compliance) is unknown, ask; never invent it to justify a choice.
+
+---
+
 ## The Brain Contract (file layout + the fields these protocols use)
 
 All files live under `.ai-team/brain/` (templates ship in `src/ai-team/brain/`).

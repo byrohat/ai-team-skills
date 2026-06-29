@@ -31,6 +31,7 @@ Each AI agent specializes in a specific area:
 |-------|------|-------------|
 | **Product Owner** | Requirement Analyst | Backlog management, INVEST user stories, Gherkin acceptance criteria, sprint planning |
 | **Team Lead** | Coordinator | Assigns tasks, tracks sprint velocity (using standard deviation) & risk matrix, owns ADR process |
+| **Technology Strategist** | Decision Maker | Technology Decision Protocol — needs-based language/framework/architecture/stack selection, decision matrix, ≥3 alternatives, risks, draft ADR (`/team-stack`) |
 | **Architecture** | Designer | High-level system design, tactical DDD, microservices boundaries, C4 Level 3/4 diagrams, ADR registry |
 | **AI Engineer** | Specialist | LLM API integrations, prompt engineering, semantic cache, hybrid search, RAG evaluation |
 | **Backend** | Developer | API contracts, database locking patterns, DB connection pool math, Transactional Outbox, business logic |
