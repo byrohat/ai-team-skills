@@ -52,7 +52,8 @@ class BrainManager:
 
         if "components" in state:
             expected_components = [
-                "product-owner", "architecture", "ai-engineer", "backend", "frontend", "devops", 
+                "product-owner", "tech-strategist", "architecture", "ux-designer", "ai-engineer",
+                "data-engineer", "backend", "frontend", "mobile-engineer", "devops", "sre",
                 "performance", "observability", "security", "privacy", "qa", "docs"
             ]
             for comp in expected_components:
@@ -280,7 +281,8 @@ class BrainManager:
     def get_full_context(self, agents: List[str] = None) -> Dict[str, Any]:
         """Get token-optimized context for session restoration."""
         agents = agents or [
-            "product-owner", "team-lead", "architecture", "ai-engineer", "backend", "frontend", "devops", 
+            "product-owner", "team-lead", "tech-strategist", "architecture", "ux-designer", "ai-engineer",
+            "data-engineer", "backend", "frontend", "mobile-engineer", "devops", "sre",
             "performance", "observability", "security", "privacy", "qa", "docs"
         ]
         context = {
@@ -333,11 +335,16 @@ class BrainManager:
             "updated_at": datetime.now(timezone.utc).isoformat(),
             "components": {
                 "product-owner": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
+                "tech-strategist": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
                 "architecture": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
+                "ux-designer": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
                 "ai-engineer": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
+                "data-engineer": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
                 "backend": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
                 "frontend": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
+                "mobile-engineer": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
                 "devops": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
+                "sre": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
                 "performance": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
                 "observability": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
                 "security": {"status": "pending", "progress": 0, "issues": [], "remaining": []},
